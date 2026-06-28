@@ -1,0 +1,49 @@
+.cassette-container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+
+.cassette-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 400px;
+}
+
+/* Top rectangle - tape name */
+.cassette-name {
+  position: absolute;
+  top: 55px;
+  left: 150px;
+  width: 280px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  font-family:'Times New Roman', Times, serif;
+}
+
+/* Bottom lines area - split into 3 columns */
+.cassette-tracks {
+  position: absolute;
+  top: 240px;
+  left: 55px;
+  width: 500px;
+  height: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.cassette-track {
+  font-size: 18px;
+  color: #222;
+  margin: 0;
+  line-height: 18px;  /* matches the line spacing in the image */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,19 @@
+.song-card{
+    
+    background-color:rgb(223, 211, 211);
+    width: 200px;
+    height: 300px;
+    padding-left: 25px;
+    align-items: center;
+    border-radius: 8px;
+    margin: 8px;
+}
+.album-cover-image{
+    width: 150px;
+    height: 150px;
+}
+.songs-grid{
+    display: flex;
+    flex-flow: row wrap;
+
+}

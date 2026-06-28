@@ -13,7 +13,8 @@ export function Home()
                 <h1>
                     Create your own mixtapes
                 </h1>
-                <Link to ="/create"><button> Get Started </button></Link>
+                <div className = "get-started-button"><Link to ="/create"><button> Get Started </button></Link></div>
+                
            
         </>
     );
