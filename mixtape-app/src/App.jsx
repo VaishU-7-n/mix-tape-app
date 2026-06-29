@@ -11,7 +11,8 @@ import { useState } from 'react';
 function App() {
 
   const [cassetteData, setCassetteData] = useState({
-  style: null,        // chosen in Create page
+  style: null,   
+  img: null,     // chosen in Create page
   songs: [],          // added in AddSongs page
   note: "",  
   name:""         // added in AddNote page

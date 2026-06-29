@@ -59,6 +59,7 @@ export function AddSongs({ cassetteData, setCassetteData }) {
       <Cassette
         style={cassetteData.style}
         songs={cassetteData.songs}
+        img={cassetteData.img}
         note={cassetteData.note}
         name={cassetteData.name}
       />

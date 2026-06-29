@@ -24,6 +24,7 @@ export function AddNote({ cassetteData, setCassetteData }) {
         style={cassetteData.style}
         songs={cassetteData.songs}
         note={cassetteData.note}
+        img={cassetteData.img}
         name={cassetteData.name}
       />
       

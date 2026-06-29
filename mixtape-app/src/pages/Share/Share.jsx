@@ -10,6 +10,7 @@ export function Share({ cassetteData}) {
         songs={cassetteData.songs}
         note={cassetteData.note}
         name={cassetteData.name}
+        img={cassetteData.img}
       />
       <button>Save</button>
       <Link to="/addnote"><button>Back</button></Link>
