@@ -1,152 +1,221 @@
-
-/* Rectangle 1 */
-.get-started-button{
- position: absolute;
-width: 261px;
-height: 77px;
-left: 97px;
-top: 496px;
-
-background: #D66ECC;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 50px;
-border:0px;
-
-font-family: 'Estedad-VF';
-font-style: normal;
-font-weight: 500;
-font-size: 32px;
-line-height: 56px;
-
-
+/* Scales the fixed 1280x832 design to fit any viewport while keeping
+   every Figma px value exact and proportional */
+.page-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFEDFF;
+    overflow: hidden;
 }
 
-.rectangle-1{
+.container {
+    position: relative;
+    width: 1280px;
+    height: 832px;
+    background: #FFEDFF;
+    flex-shrink: 0;
+
+    /* scale to fit viewport, keep aspect ratio */
+    transform: scale(min(100vw / 1280, 100vh / 832));
+}
+
+
+
+/* Rectangle 5 - white header */
+.rectangle-5 {
     position: absolute;
-width: 89vw;
-height: 44vh;
-left: 66px;
-top: 321px;
+    width: 1148px;
+    height: 256px;
+    left: 66px;
+    top: 62px;
 
-background: #F3ACEC;
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    background: #FFFEFE;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.rectangle-2{
-    /* Rectangle 5 */
+/* Rectangle 6 - pink lower section */
+.rectangle-6 {
+    position: absolute;
+    width: 1148px;
+    height: 326px;
+    left: 66px;
+    top: 321px;
 
-position: absolute;
-width: 89vw;
-height: 33vh;
-left: 66px;
-top: 62px;
-
-background: #FFFEFE;
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    background: #F3ACEC;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.casette-center{
-    /* Rectangle 2 */
+/* Create your own mix-tape */
+.text-starter {
+    position: absolute;
+    width: 1168px;
+    height: 317px;
+    left: 130px;
+    top: 62px;
+    margin: 0;
 
-position: absolute;
-width: 55vw;
-height: 22vh;
-left: 329px;
-top: 294px;
-
-background: #FFFFFF;
-box-shadow: -10px -8px 4px rgba(0, 0, 0, 0.25), 10px 10px 4px rgba(108, 37, 116, 0.25);
-border-radius: 100px;
-
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 125px;
+    color: #000000;
 }
 
-.casette-circle-1{
-    /* Ellipse 1 */
+.get-started-button {
+    position: absolute;
+    width: 261px;
+    height: 77px;
+    left: 97px;
+    top: 496px;
+    z-index: 10;
 
-position: absolute;
-width: 11vw;
-height: 19vh;
-left: 350px;
-top: 308px;
-border-radius: 100px;
+    background: #D66ECC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: 0px;
+    cursor: pointer;
 
-background: #D9D9D9;
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    font-family: 'Estedad', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 56px;
+    color: #000000;
 }
 
-.casette-circle-2{
-    /* Ellipse 2 */
 
-position: absolute;
-width: 11vw;
-height: 19vh;
-left: 955px;
-top: 308px;
-border-radius: 100px;
+/* Rectangle 2 - cassette body */
+.casette-center {
+    position: absolute;
+    width: 707px;
+    height: 167px;
+    left: 309px;
+    top: 294px;
+    z-index: 6;
 
-background: #D9D9D9;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-
+    background: #FFFFFF;
+    box-shadow: -10px -8px 4px rgba(0, 0, 0, 0.25), 10px 10px 4px rgba(108, 37, 116, 0.25);
+    border-radius: 100px;
 }
 
-.casette-center-rect{
-    /* Rectangle 4 */
+/* Ellipse 1 - left reel */
+.casette-circle-1 {
+    position: absolute;
+    width: 143px;
+    height: 143px;
+    left: 328.5px;
+    top: 308px;
+    z-index: 7;
 
-position: absolute;
-width: 19vw;
-height: 8vh;
-left: 600px;
-top: 308px;
-
-background: #D9D9D9;
-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.63);
-
+    background: #D9D9D9;
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.text-starter{
-    /* Create your own mix-tape */
+/* Ellipse 2 - right reel */
+.casette-circle-2 {
+    position: absolute;
+    width: 143px;
+    height: 143px;
+    left: 858px;
+    top: 308px;
+    z-index: 7;
 
-position: absolute;
-width: 91vw;
-height: 43vh;
-left: 112px;
-top: -50px;
-border: 0px;
-
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 900;
-font-size: 96px;
-line-height: 125px;
-
-color: #000000;
-
-
-
-}
-.container{
-position: relative;
-width: 100vw;
-height: 100vh;
-
-background: #FFEDFF;
-
+    background: #D9D9D9;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.bottom-rectangle{
-    /* Rectangle 3 */
+/* Rectangle 4 - center window */
+.casette-center-rect {
+    position: absolute;
+    width: 245px;
+    height: 63px;
+    left: 540px;
+    top: 308px;
+    z-index: 7;
 
-position: absolute;
-width: 54vw;
-height: 22vh;
-left: 329px;
-top: 666px;
-
-background: #FFEDFF;
-box-shadow: 0px -5px 15px #2C1532, 10px 10px 4px rgba(27, 2, 29, 0.25);
-border-radius: 15px;
-
+    background: #D9D9D9;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.63);
 }
+
+/* Rectangle 3 - bottom trapezoid-ish panel */
+.bottom-rectangle {
+    position: absolute;
+    width: 699px;
+    height: 166px;
+    left: 329px;
+    top: 666px;
+    z-index: 5;
+
+    background: #FFEDFF;
+    box-shadow: 0px -5px 15px #2C1532, 10px 10px 4px rgba(27, 2, 29, 0.25);
+    border-radius: 15px;
+}
+
+/* the 4 small circles on the bottom panel — positioned relative to .container,
+   so left/top below are the same absolute coords Figma gave you */
+.ellipse-3 {
+    position: absolute;
+    width: 38px;
+    height: 39px;
+    left: 75px;  /* 404 - 329 (parent left) */
+    top: 103px;  /* 769 - 666 (parent top) */
+    background: #C4C2C2;
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.ellipse-5 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 113px; /* 442 - 329 */
+    top: 70px;   /* 736 - 666 */
+    background: #C4C2C2;
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.ellipse-6 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 580px; /* 909 - 329 */
+    top: 70px;   /* 736 - 666 */
+    background: #C4C2C2;
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.ellipse-4 {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    left: 611px; /* 940 - 329 */
+    top: 104px;  /* 770 - 666 */
+    background: #C4C2C2;
+    border-radius: 50%;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.triangle1 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    background: #FFEDFF;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+}
+
+.triangle2 {
+    position: absolute;
+    left: 1050px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    background: #FFEDFF;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
+}
+
+
