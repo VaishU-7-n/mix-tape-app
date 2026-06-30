@@ -1,4 +1,4 @@
-
+import './CreateTape/CreateTape.css'
 import { useState } from "react";
 export function AddName({ cassetteData, setCassetteData })
 {
@@ -10,14 +10,15 @@ export function AddName({ cassetteData, setCassetteData })
 
     return(
         <>
-        <h1>Step 2: Add Name</h1>
+        <h1 className='page-title'>Add Name</h1>
 
-        
-        <input
+       <input
+        className='input-container'
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <button onClick={handleSave}>Save</button>
+      <button onClick={handleSave}
+      className="save-btn">Save</button>
    
         </>
     );

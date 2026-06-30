@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Cassette } from "../../components/Casette";
 import { AddName } from "../AddName";
+import "./CreateTape.css";
 
 import img1 from '../../assets/casetteImage.png'
 import img2 from '../../assets/casetteImage2.png'
@@ -16,23 +17,26 @@ const CASSETTE_STYLES = [
 
 export function CreateTape({ cassetteData, setCassetteData }) {
   return (
-    <>
-      <h1>Step 1: Choose your cassette</h1>
+    <div className="create-tape-page">
+      <h1 className="page-title">Choose your cassette</h1>
 
-      {CASSETTE_STYLES.map(({ id, img }) => (
-        <div key={id} className="op">
-          <img src={img} alt={id} width={120} />
-          {cassetteData.style === id && <span>✓</span>}
-          <button onClick={() => setCassetteData({ ...cassetteData, style: id, img })}>
-            Choose
-          </button>
-        </div>
-      ))}
+      <div className="carousel">
+        {CASSETTE_STYLES.map(({ id, img }) => {
+          const isSelected = cassetteData.style === id;
+          return (
+            <div
+              key={id}
+              className={`carousel-card ${isSelected ? "selected" : ""}`}
+              onClick={() => setCassetteData({ ...cassetteData, style: id, img })}
+            >
+              <img src={img} alt={id} className="cassette-img" />
+              {isSelected && <span className="check-badge">✓</span>}
+            </div>
+          );
+        })}
+      </div>
 
       <AddName cassetteData={cassetteData} setCassetteData={setCassetteData} />
-      <Link to="/addsongs"><button>Next</button></Link>
-      <Link to="/"><button>Back</button></Link>
-    
       <Cassette
         style={cassetteData.style}
         img={cassetteData.img}
@@ -40,6 +44,13 @@ export function CreateTape({ cassetteData, setCassetteData }) {
         note={cassetteData.note}
         name={cassetteData.name}
       />
-    </>
+      
+
+      <div className="nav-buttons">
+        <Link to="/"><button className="btn-secondary">Back</button></Link>
+        <Link to="/addsongs"><button className="btn-primary">Next</button></Link>
+      </div>
+
+    </div>
   );
 }

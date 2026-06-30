@@ -1,0 +1,36 @@
+.page-title {
+  width: 1140px;
+  max-width: 90%;
+  margin: 47px auto 0;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 83px;
+  color: #000000;
+  text-align: left;
+ margin-left: 10px;
+}
+.add-songs-page {
+  position: relative;
+  min-height: 982px;
+  width: 100%;
+  background: #FFEDFF;
+  padding-bottom: 80px;
+  overflow: hidden;
+}
+.nav-button{
+        margin-top: 40px;
+      background: #D66ECC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    border: 0px;
+    cursor: pointer;
+
+   font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 14px 36px;
+    color: #000000;
+margin-left: 10px;
+}
